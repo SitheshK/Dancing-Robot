@@ -1,0 +1,209 @@
+.bor{
+    background-color: rgb(7, 11, 2);
+}
+.ROBOT{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    height: 500px;
+    width: 500px;
+    margin-left: 500px;
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 130px;
+    justify-content: space-evenly;
+    border-radius: 50% 50% 0% 0%;
+}
+.EYE{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.eye{
+    background-color: rgb(235, 230, 230);
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+}
+/* .nose{
+    background-color: rgb(235, 230, 230);
+    height: 20px;
+    width: 5px;
+    border-radius: 100%;
+    margin-left:63px ;
+}
+.mouth{
+    background-color: rgb(235, 230, 230);
+    height: 5px;
+    width: 30px;
+    border-radius: 100%;
+    margin-left:52px ;
+} */
+.mid{
+    margin-top: 20px;
+    height: 100px;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.body{
+    height: 120px;
+    width: 130px;
+    border-radius:0 0 30% 30% ;
+}
+.handL , .handR{
+    height: 90px;
+    width: 25px;
+    border-radius: 20px ;
+}
+.LEG{
+    height: 65px;
+    width: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.legL , .legR{
+    height: 80px;
+    width: 25px;
+    border-radius: 20px ;
+}
+.ROBOT:hover .head{
+    animation: rotation 1s infinite;
+}
+@keyframes rotation {
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 150px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+.ROBOT:hover .face{
+    animation: movement 1s infinite;
+}
+@keyframes movement {
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-30px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+.ROBOT:hover .body{
+    animation: body_movement 2s infinite;
+    border-radius: 35px;
+}
+@keyframes body_movement {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+.ROBOT:hover .handR{
+    animation: right_movement 1s infinite;
+    border-radius: 20px;
+    display: inline-block;
+    transform-origin: top left;
+}
+@keyframes right_movement {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.ROBOT:hover .handL{
+    animation: left_movement 1s infinite;
+    border-radius: 20px;
+    display: inline-block;
+    transform-origin: top right;
+}
+@keyframes left_movement {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-90deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.ROBOT:hover .legL{
+    animation: right_leg_movement 1s infinite;
+    border-radius: 20px;
+}
+@keyframes right_leg_movement {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.ROBOT:hover .legR{
+    animation: left_leg_movement 1s infinite;
+    border-radius: 20px;
+    display: inline-block;
+    transform-origin: top right;
+}
+
+@keyframes left_leg_movement {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.ROBOT:hover {
+    animation: coloring 4s infinite linear;
+    /* border-radius: 100px; */
+    transform-origin: center;
+}
+
+@keyframes coloring {
+    0% {
+        background-color: lightgreen;
+    }
+    20% {
+        background-color: rgb(18, 105, 134);
+    }
+    40% {
+        background-color: lightseagreen;
+    }
+    60% {
+        background-color: lightcoral;
+    }
+    80% {
+        background-color: rgb(147, 147, 69);
+    }
+    100% {
+        background-color: rgb(138, 63, 138);
+    }
+}
